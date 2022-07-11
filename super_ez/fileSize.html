@@ -1,0 +1,35 @@
+html
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>JavaScript File Upload Example</title>
+  <script type="text/javascript">
+    function showFileSize() {
+        var fileInput =  document.getElementById("fileinput"); // Khai báo id file nhập vào
+        
+    try{
+        var element = document.getElementById('OP'); //Khai báo id thẻ p trong HTML để xuất giá trị ra
+
+        // Chuyển từ giá trị sang HTML bằng innerHTML.
+        element.innerHTML = `<p>File Name: ${fileInput.files[0].name}  </p>
+         <p>File Size: ${fileInput.files[0].size} bytes</p>
+         <p>File Extension: ${(fileInput.files[0].name).split('.').pop()}</p>
+        `
+        //alert(`${fileInput.files[0].size} bytes`); 
+    }catch(e){
+       
+    }
+    }
+  </script>
+</head>
+
+<body>
+  <form action="#" onsubmit="return false;">
+    <input type="file" id="fileinput" />
+    <input type="button" id="btnLoad" value="Load" onclick="showFileSize();" />
+    <p id="OP"></p> 
+     
+  </form>
+</body>
+</html>
