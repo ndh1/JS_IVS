@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <p>## Calculate Change</p>
+        <p>`function _two(cents)`</p>
+
+        Create a JavaScript function that meets the following requirements:<br>
+        * Is passed an integer parameter, representing a number of Canadian cents.<br>
+        * The function uses the parameter to determine the smallest number of Canadian quarters, dimes, nickels and<br>
+        pennies that are equal to the given (parameter) amount.<br>
+        * Displays the calculated information as illustrated below:<br>
+
+        ```Calling _two(80)```<br>
+
+        ```80 cents in minimal change is: 3 quarters, 0 dimes, 1 nickels and 0 pennies.```<br>
+        1 quarter = 25 cen, 1 dime = 10 cen, 1 nicke = 5 cen, 1 penies = 1 cen<br>
+<br>
+
+
+
+</body>
+</html>
+
+<script>
+    function _two(cents)
+{   
+    temp=cents;
+    var quarter = Math.floor(temp/25);
+    temp = temp - quarter*25;
+    
+    var dime = Math.floor (temp/10);
+    temp = temp - dime*10;
+
+    var nicke = Math.floor(temp/5);
+    temp = temp - nicke*5;
+
+    var penies = Math.floor(temp/1);
+
+    console.log('Quarter: '+quarter);
+    console.log('Dimes: '+dime);
+    console.log('Nicke: '+nicke);
+    console.log('Penies: '+penies);
+}
+_two(80);
+</script>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+
+## Repeating Characters
+`function repeatingCharacter(string)`
+
+Create a JavaScript function that meets the following requirements:
+* Please give your function a descriptive name
+* That takes in a string
+* The function returns the first character that repeats
+* If there is no character that repeats, return -1
+* The function should be case sensitive (case sensitive "I" not equal to "i")
+* Displays the result to the console as illustrated below.
+
+```Calling repeatingCharacter(“legolas”) ➔ "l"```
+
+```Calling repeatingCharacter(“Gandalf”) ➔ "a"```
+
+```Calling repeatingCharacter(“Balrog”) ➔ "-1"```
+
+```Calling repeatingCharacter(“Isildur”) ➔ "-l"```
+
+    -->
+    <script>
+        function repeatingCharacter(str) {
+            var arr = str.trim().split('');
+            var t = -1;
+
+            for (var i = 0; i < arr.length; i++) {
+                for (var j = i + 1; j < arr.length; j++) {
+                    if (arr[i] == arr[j]) {
+                        t = i;
+                        break;
+                    }
+                }
+                if (t != -1) {
+                    console.log(arr[i]);
+                    break;
+                }
+            }
+            if (t == -1) {
+                console.log(t);
+
+            }
+        }
+        repeatingCharacter("legolas");
+    </script>
+</body>
+
+</html>

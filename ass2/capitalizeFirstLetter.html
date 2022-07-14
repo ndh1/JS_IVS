@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+        ## Capitalize first Letter of Each Word
+`function capitalizeFirstLetter(string)`
+
+Create a JavaScript function that meets the following requirements:
+* Please give your function a descriptive name
+* That takes in a string as an argument
+* The function converts first character of each word to uppercase
+* The function returns the newly formatted string
+* Displays the result to the console as illustrated below.
+
+```Calling capitalizeFirstLetter("This is a title") ➔ "This Is A Title"```
+
+```Calling capitalizeFirstLetter("capitalize every word") ➔ "Capitalize Every Word"```
+
+```Calling capitalizeFirstLetter("I Like Pizza") ➔ "I Like Pizza"```
+
+```Calling capitalizeFirstLetter("PIZZA PIZZA PIZZA") ➔ "PIZZA PIZZA PIZZA"```
+
+    -->
+</body>
+    <script>
+        function capitalizeFirstLetter(str)
+        {
+            var arr=str.trim().split('')
+            arr[0]=arr[0].toUpperCase();
+            for(var i=1;i<arr.length;i++)
+            {
+                if(arr[i-1]==' ')
+                    arr[i]=arr[i].toUpperCase();
+            }
+            console.log(str);
+            console.log(arr.join(''));
+        }
+        capitalizeFirstLetter("This is a title")
+    </script>
+</html>

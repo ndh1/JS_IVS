@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+
+## How many Days Between
+`function daysBetweenTwoDates( str_date1, str_date2 )`
+
+Create a JavaScript function that meets the following requirements:
+* Please give your function a descriptive name
+* Create a function that takes two valid dates as arguments
+* The function returns the number of days between str_date1 and str_date2
+* Displays the calculated information as illustrated below:
+
+```Calling daysBetweenTwoDates("June 14, 2021", "June 20, 2021") ➔ 6 ```
+
+```Calling daysBetweenTwoDates("December 29, 2021", "January 1, 2022") ➔ 3 ```
+
+```Calling daysBetweenTwoDates("July 20, 2021", "July 30, 2021") ➔ 10 ```
+
+    -->
+
+    <script>
+        function daysBetweenTwoDates(dd1, dd2) {
+            var d1 = new Date(dd1);
+            var d2 = new Date(dd2);
+            let ms1 = d1.getTime();
+            let ms2 = d2.getTime();
+            let time = Math.ceil((ms2 - ms1) / (24 * 60 * 60 * 1000));
+            console.log(time);
+        }
+        daysBetweenTwoDates("June 14, 2021", "June 20, 2021")
+    </script>
+</body>
+
+</html>

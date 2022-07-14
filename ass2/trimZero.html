@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+        ## Leading Zeros
+`function trimZero(string)`
+
+Create a JavaScript function that meets the following requirements:
+* Please give your function a descriptive name
+* That takes in a string number as an argument
+* The function returns the number removing any trailing and/or leading zeros.
+* Trailing zeros are the zeros after a decimal point which don’t affect the value of the number
+* Leading zeros are the zeros before a number which don’t affect the value of the number
+* Displays the results to the console as illustrated below:
+
+```Calling trimZero("230.000") ➔ "230"```
+
+```Calling trimZero("00402") ➔ "402"```
+
+```Calling trimZero("03.1400") ➔ "3.14"```
+
+```Calling trimZero("30") ➔ "30"```
+    -->
+
+    <script>
+        function trimZero(str)
+        {
+            var num = Number(str);
+            console.log(num);
+        }
+        trimZero("230.000");
+        trimZero("00402");
+        trimZero("03.1400")
+        trimZero("30")
+    </script>
+</body>
+
+</html>

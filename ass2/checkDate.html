@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+        ## Check Date
+`function checkDate(string)`
+
+Create a JavaScript function that meets the following requirements:
+* Please give your function a descriptive name
+* Receives a string as a parameter.
+* The function returns a Boolean indicating if the parameter string passed, is a valid date
+  - True indicates a valid date was provideD
+  - False indicates that a valid date was not provided.
+* A valid date string, will have only the full month name (ex “January” not “Jan”) and a day number
+  - A year will not be provided and thus your logic need not be concerned in that regard.
+* The string parameter can contain any number of spaces, but the month name must always start at the first non-space character from the beginning of the string
+* The day number part of the date string to be tested could contain alphabetic characters and thus making it invalid.
+* You may assume February only has 28 days in it.
+* Displays the calculated information as illustrated below:
+
+```Calling checkDate("January 21") ➔ true```
+
+```Calling checkDate("Auust 3") ➔ false```
+
+```Calling checkDate("June 15B") ➔ false```
+
+```Calling checkDate("February 0") ➔ false```
+
+```Calling checkDate("December 3k1") ➔false```
+
+```Calling checkDate("February 29") ➔ false```
+
+```Calling checkDate("February 28") ➔ true```
+
+## How many Days Between
+`function daysBetweenTwoDates( str_date1, str_date2 )`
+
+Create a JavaScript function that meets the following requirements:
+* Please give your function a descriptive name
+* Create a function that takes two valid dates as arguments
+* The function returns the number of days between str_date1 and str_date2
+* Displays the calculated information as illustrated below:
+
+```Calling daysBetweenTwoDates("June 14, 2021", "June 20, 2021") ➔ 6 ```
+
+```Calling daysBetweenTwoDates("December 29, 2021", "January 1, 2022") ➔ 3 ```
+
+```Calling daysBetweenTwoDates("July 20, 2021", "July 30, 2021") ➔ 10 ```
+
+    -->
+    <script>
+        function checkDate(str) {
+            let sep = /\s/;
+            let array = str.split(" ");
+            //console.log(array[0] );
+            var tr = false;
+
+            var d = str + " 2022"
+            var dd = new Date(d);
+            //console.log(dd);
+
+            if (dd != 'Invalid Date') {
+                tr = true;
+            }
+
+            //giả sử tháng 2 có 28 ngày
+            if (array[0] == 'February') {
+                if (array[1] > 28) {
+                    tr = false;
+                }
+            }
+            console.log(str + " -> " + tr);
+
+        }
+        let str1_3 = "February 2k1";
+        let str2_3 = "Auust 3";
+        let str3_3 = "February 30";
+        let str4_3 = "december 3";
+        let str5_3 = "march 8";
+        checkDate(str1_3);
+        checkDate(str2_3);
+        checkDate(str3_3);
+        checkDate(str4_3);
+        checkDate(str5_3);
+    </script>
+</body>
+
+</html>

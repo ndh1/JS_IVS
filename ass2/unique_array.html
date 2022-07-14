@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+        `function uniqueArray(arr)`
+
+Create a JavaScript function that meets the following requirements:
+* Please give your function a descriptive name
+* Receives an array of integers as an argument
+* The function removes all duplicates (if they exist) from the array and returns it to the caller.
+* Assume the input array parameter will have at least one element in it.
+* Displays the calculated information as illustrated below:
+
+```Calling uniqueArray([33]) ➔ [33]```
+
+```Calling uniqueArray([33, 33, 1, 4]) ➔ [1, 4]```
+
+```Calling uniqueArray([33, 33, 1, 4, 1]) ➔ [4]```
+    -->
+    <script>
+        function uniqueArray(arr) {
+            var arr1 = []; //Khai báo mảng mới để xuất ra cho đẹp
+            for (var i = 0; i < arr.length; i++) {
+                var t = 0;
+                for (var j = 0; j < arr.length; j++) {
+                    if (arr[i] == arr[j]) {
+                        t++;
+                       
+                    }
+                }
+                if (t == 1)
+                    arr1.push(arr[i]);
+            }
+            console.log(arr1);
+        }
+        uniqueArray([33, 33,33,33,33, 1, 4, 1]);
+
+    </script>
+</body>
+
+</html>

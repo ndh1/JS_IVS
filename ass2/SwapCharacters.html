@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+        ## Swap Characters
+`function swapCharacter(string, c1, c2)`
+
+Create a JavaScript function that meets the following requirements:
+* Please give your function a descriptive name
+* That take three arguments, a string, character 1 and character 2
+* The function replaces all instances of c1 with c2, and vice versa
+* The function returns the updated string
+* Displays the result to the console as illustrated below.
+
+```Calling swapCharacter("aabbccc", "a", "b") ➔ "bbaaccc"```
+
+```Calling swapCharacter("random w#rds writt&n h&r&", "#", "&") ➔ "random w&rds writt#n h#r#"```
+
+```Calling swapCharacter("128 895 556 788 999", "8", "9") ➔ "129 985 556 799 888"```
+    -->
+    <script>
+        function swapCharacter(string,c1,c2)
+        {
+            var str = string.split('');
+            console.log(string);
+
+            for(var i=0;i<str.length;i++)
+            {
+                if(str[i]==c1)
+                {
+                    str[i]=c2;
+                }
+                else{
+                    if (str[i]== c2){
+                        str[i] = c1;
+                    }
+                }
+            }
+           
+            var string1=str.join('');
+            console.log(string1);
+            
+            
+        }
+        swapCharacter('aabbccc','a','b');
+    </script>
+</body>
+
+</html>

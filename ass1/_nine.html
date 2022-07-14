@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function _nine(str) {
+            var str1 = str.toUpperCase();
+            var arr = str1.split('');
+            var a = 0, e = 0, i = 0, o = 0, u = 0, y = 0;
+            arr.map(c => {
+                switch (c) {
+                    case 'A': a++; break;
+                    case 'E': e++; break;
+                    case 'I': i++; break;
+                    case 'O': o++; break;
+                    case 'U': u++; break;
+                    case 'Y': y++; break;
+                    default: break;
+                }
+            })
+            console.log("Vowel count: A=" + a + ", E=" + e + ", I=" + i + ", O=" + o + ", U=" + u + ", Y=" + y);
+        }
+        _nine('flugelhorn');
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+        ## Move Capital Letters
+`function moveCapitalToFront(string)`
+
+Create a JavaScript function that meets the following requirements:
+* Please give your function a descriptive name
+* The function moves all capital letters to the front of a word.
+* The uppercase letters moved to the front, maintain their original relative order
+* The lowercase letters moved to the back front, maintain their original relative order
+* Displays the result to the console as illustrated below:
+
+```Calling moveCapitalToFront("hApPy") ➔ "APhpy"```
+
+```Calling moveCapitalToFront("moveMENT") ➔ "MENTmove"```
+
+```Calling moveCapitalToFront("shOrtCAKE") ➔ "OCAKEshrt"```
+
+    -->
+
+    <script>
+        //## Move Capital Letters
+        function moveCapitalToFront(str) {
+            var arr = str.split('');
+            var arr1 = [];
+            for (var i = 0; i < arr.length; i++) {
+                var j = arr[i].charCodeAt(0);
+                if (j >= 65 && j <= 90) {
+                    arr1.push(arr[i]);
+                    arr.splice(i, 1);
+                    i--;
+                }
+            }
+            console.log(arr1.join('') + arr.join(''));
+        }
+        moveCapitalToFront("shOrtCAKE");
+    </script>
+</body>
+
+</html>

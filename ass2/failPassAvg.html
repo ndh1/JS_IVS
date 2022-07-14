@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+    ## Fail Pass Averages
+`function failPassAvg(arr)`
+
+Create a JavaScript function that meets the following requirements:
+* Please give your function a descriptive name
+* Receives an array of numbers as a parameter, with each integer being a mark out of 100.
+* The function should return an array consisting of all the averages less than 50, followed by the average of all the mark more than 50.
+  - both averages should be rounded to the nearest whole number.
+  - If there are no failing marks (< 50), then the average fail mark should be set to -1
+  - If there are no passing marks (< 50), then the average pass mark should be set to -1
+* Displays the calculated information as illustrated below:
+
+```Calling failPassAvg(([63, 65, 33]) ➔ [33, 64]```
+
+```Calling failPassAvg(([[63, 62, 100, 100]]) ➔ [-1, 81]```
+
+```Calling failPassAvg(([33, 42, 20, 10]) ➔ [26, -1]```
+ -->
+
+    <script>
+        function failPassAvg(arr) {
+            
+            var sumb50 = 0, tb50 = 0, sums50 = 0, ts50 = 0;
+
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] >= 50) {
+                    sumb50 += arr[i];
+                    tb50++;
+                }
+                else {
+                    sums50 += arr[i];
+                    ts50++;
+                }
+            }
+            if (tb50 > 0) {
+                sumb50 = sumb50 / tb50;
+            } else {
+                sumb50 = -1;
+            }
+            if (ts50 > 0) {
+                sums50 = sums50 / ts50;
+            } else {
+                sums50 = -1;
+            }
+
+            console.log([sumb50, sums50]);
+        }
+        failPassAvg([63, 65, 33]);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+        ## Sort Me
+`function sortArray(arr[], str)`
+
+Create a JavaScript function that meets the following requirements:
+* Please give your function a descriptive name
+* That takes in an array of integers, and a string (“Asc”, “Des”, “None”)
+* The function returns the array of number according to the following rules
+  - “***Asc***” returns a sorted array in ascending order
+  - “***Des***” returns a sorted array in descending order
+  - “***None***” returns an array without any modification
+* Displays the result to the console as illustrated below:
+
+```Calling sortArray([4, 3, 2, 1], "Asc")  ➔ [1, 2, 3, 4] ```
+
+```Calling sortArray([7, 8, 11, 66], "Des")  ➔ [66, 11, 8, 7] ```
+
+```Calling sortArray([1, 2, 3, 4], "None")  ➔ [1, 2, 3, 4] ```
+    -->
+
+    <script>
+        function sortArray(a, b) {
+            var tang, giam;
+            if (b == "Asc") {
+                tang = a.sort(function(a, b){return a - b});
+                console.log(tang)
+            };
+
+            if (b == "Des") {
+                giam = a.sort(function(a,b){return b - a});
+                console.log(giam);
+            }
+            console.log(a)
+        
+        }
+        sortArray([111, 7, 11, 54], "None")
+    </script>
+</body>
+
+</html>
